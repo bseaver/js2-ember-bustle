@@ -36,6 +36,7 @@ You will need the following things properly installed on your computer.
 * add findAll('article') in index.js
 * ember install ember-bootstrap (uninstall: npm uninstall ember-bootstrap --save-dev)
 * ember g component article-detail
+* ember g component update-article
 
 ## Running / Development
 
