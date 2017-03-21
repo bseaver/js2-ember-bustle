@@ -7,10 +7,16 @@ export default Ember.Route.extend({
 
   actions: {
     saveArticle(params) {
+      console.log(params);
+      Object.keys(params).forEach(function(key) {
+        if (params[key]===undefined) {
+          params[key]= "";
+        }
+      });
+      console.log(params);
+
       var newArticle = this.store.createRecord('article', params);
-      result = newArticle.save();
-      console.log(result);
-      alert("In index.js saveArticle");
+      newArticle.save();
       this.transitionTo('index');
     }
   }
